@@ -12,8 +12,8 @@ import { TypeAnimation } from "react-type-animation";
 
 export default function HeroSection() {
     return (
-        <div className="min-h-screen flex items-center justify-center overflow-hidden">
-            <div className="max-w-(--breakpoint-xl) w-full mx-auto grid lg:grid-cols-2 gap-12 px-6 py-12 lg:py-0">
+        <div className="flex items-center justify-center overflow-hidden">
+            <div className="max-w-(--breakpoint-xl) w-full mx-auto grid lg:grid-cols-2 gap-12 px-6 py-12 md:py-12">
                 <div className="my-auto">
                     <Badge
                         variant="secondary"
@@ -25,7 +25,7 @@ export default function HeroSection() {
                         </Link>
                     </Badge>
                     <h1 className=" text-white mt-6 max-w-[17ch] text-4xl md:text-5xl lg:text-[2.75rem] xl:text-[3.25rem] font-semibold leading-[1.2]! tracking-tighter">
-                        <span className="text-primary">Hello, I´m{" "}</span>
+                        <span className="text-primary">Hello, I'm{" "}</span>
                         <br/>
                         <TypeAnimation
                             sequence={[
@@ -47,16 +47,16 @@ export default function HeroSection() {
                         easy-to-implement examples.
                     </p>
                     <div className="mt-12 flex flex-col xl:flex-row items-center gap-4">
-                        <Button size="lg">
+                        <Button size="lg" className="cursor-pointer">
                             Download CV <FiDownload className="h-5! w-5!" />
                         </Button>
-                        <Button size="lg" variant="outline">
+                        <Button size="lg" variant="outline" className="cursor-pointer">
                             Hire Me <GoArrowUpRight className="h-5! w-5!" />
                         </Button>
                         <Social />
                     </div>
                 </div>
-                <div className="w-full h-full place-self-center">
+                <div className="w-full h-full place-self-center my-auto flex items-center justify-center flex-row">
                     <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
                         <Image src={avatar} alt="" width={300} height={300} className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"/>
                     </div>
