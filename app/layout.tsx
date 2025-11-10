@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {Geist, Geist_Mono, Unbounded} from "next/font/google";
 import "./globals.css";
 import {ReactNode} from "react";
 import Navbar from "@/app/components/Navbar";
@@ -14,6 +14,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const unbounded = Unbounded({
+    variable: '--font-unbounded',
+    subsets: ['latin'],
+})
+
 export const metadata: Metadata = {
   title: "Cedric. Portfolio",
   description: "Portfolio personnel",
@@ -27,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#121212]`}
+        className={`${geistSans.variable} ${geistMono.variable} ${unbounded.variable} antialiased bg-[#121212]`}
       >
       <Navbar />
         {children}
