@@ -101,8 +101,11 @@ export default function HeroSection() {
             <div className="stats px-[8%] lg:px-[16%] mt-30 hidden lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 {statsData.map((stat, index) => (
                     <div key={index} className="flex gap-2 items-center">
-                        <h1 ref={el => el && (countRefs.current[index] = el)}
-                            className="text-7xl font-bold text-primary">0</h1>
+                        <h1 ref={el => {
+                            if (el) {
+                                countRefs.current[index] = el;
+                            }
+                        }} className="text-7xl font-bold text-primary">0</h1>
                         <p className="text-xl ps-4 text-gray-400 font-semibold whitespace-pre-line">{stat.title}</p>
                     </div>
                 ))}
