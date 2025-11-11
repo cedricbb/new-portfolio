@@ -223,3 +223,51 @@
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
     background-color: var(--color-primary);
 }
+
+@keyframes Anim-bottom {
+    0% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+.work-content h2 {
+    opacity: 0;
+    animation: Anim-bottom 1.4s forwards linear ;
+}
+.work-content h3 {
+    opacity: 0;
+    animation: Anim-bottom 1.2s forwards linear ;
+}
+.work-content p {
+    opacity: 0;
+    animation: Anim-bottom 1s forwards linear ;
+}
+.work-icons {
+    opacity: 0;
+    animation: Anim-bottom 0.8s forwards linear ;
+}
+.work-share {
+    opacity: 0;
+    animation: Anim-bottom 0.6s forwards linear ;
+}
+.work-image {
+    opacity: 0;
+    animation: Anim-bottom 0.3s forwards linear ;
+}
+.contact-col span {
+    transition: color;
+}
+/*.contact-col:hover span {*/
+/*    border-color: var(--color-white);*/
+/*    color: var(--color-white);*/
+/*}*/
+@media (max-width: 991px) {
+    body {
+        overflow-x: hidden!important;
+        overflow-y: scroll!important;
+    }
+}
