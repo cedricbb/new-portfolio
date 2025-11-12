@@ -6,17 +6,27 @@ const ServicesData = [
     {
         id: '01',
         title: 'Web Development',
-        desc: ' Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+        desc: 'I design high-performance, modern, and customized websites, designed to offer a smooth and intuitive experience. From design to launch, I ensure clean, fast, and optimized integration.',
     },
     {
         id: '02',
         title: 'Mobile Development',
-        desc: ' Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+        desc: 'I develop hybrid mobile applications focused on user experience. My goal: reliable, responsive, and easy-to-maintain apps that are compatible with both Android and iOS.',
     },
     {
         id: '03',
         title: 'SEO',
-        desc: ' Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+        desc: 'I optimize the performance and structure of your websites to improve their visibility on search engines. Clean code, modern practices, and technical audits for better positioning.',
+    },
+    {
+        id: '04',
+        title: 'WordPress Plugin Creation',
+        desc: 'I create custom WordPress extensions to meet specific needs. Whether adding functionality or automating a process, each plugin is designed to be lightweight, secure, and maintainable.',
+    },
+    {
+        id: '05',
+        title: 'WordPress Formation',
+        desc: 'I help individuals and professionals get started with WordPress. Training courses are tailored to your level and needs: content management, theme creation, optimization, security, and best practices for development.',
     },
 ]
 export default function Services() {

@@ -15,37 +15,32 @@ export default function About() {
     // Experience
     const experiences = [
         {
-            date: '2018 - Present',
-            role: 'Full Stack Developer',
-            company: 'Arxama',
+            date: '2023 - Present',
+            role: 'WordPress Developer',
+            company: 'Com & Company - Lyon 6',
         },
         {
-            date: '2018 - Present',
+            date: '2015 - Present',
             role: 'Full Stack Developer',
-            company: 'Arxama',
+            company: 'Self-Taught',
         },
         {
-            date: '2018 - Present',
+            date: '2017 - 2023',
             role: 'Full Stack Developer',
-            company: 'Arxama',
+            company: 'Arxama - Saint Symphorien d\'Ozon',
         },
         {
-            date: '2018 - Present',
-            role: 'Full Stack Developer',
-            company: 'Arxama',
-        },
-        {
-            date: '2018 - Present',
-            role: 'Full Stack Developer',
-            company: 'Arxama',
+            date: '2013 - 2016',
+            role: 'IT Technician',
+            company: 'Passman - Villeurbanne',
         },
     ]
 
     // Education
     const educations = [
-        {year: '2020', degree: 'RNCP niveau V', institute: 'Web Force 3'},
-        {year: '2020', degree: 'RNCP niveau V', institute: 'Web Force 3'},
-        {year: '2020', degree: 'RNCP niveau V', institute: 'Web Force 3'},
+        {year: '2015', degree: 'Full Stack Developer', institute: 'Me - Vénissieux'},
+        {year: '2017', degree: 'RNCP niveau V', institute: 'Web Force 3 - Lyon'},
+        {year: '2013', degree: 'IT Technician', institute: 'AFPA - Vénissieux'},
     ]
 
     const skills = [
@@ -66,7 +61,9 @@ export default function About() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                 <div>
                     <h2 className='text-4xl font-bold mb-4'>Why hire me?</h2>
-                    <p className='text-gray-400 mt-6 mb-10'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid deserunt, id ipsam numquam omnis tempore.</p>
+                    <p className='text-gray-400 mt-6 mb-10'>I combine technical expertise and attention to detail to create modern,
+                        high-performance applications that are enjoyable to use. I place particular importance on code quality, user experience,
+                        and clear communication throughout the project. My goal: to deliver reliable, scalable, and truly useful solutions.</p>
                     <div className="flex flex-col gap-5">
                         {tabs.map((tab) => (
                             <button key={tab} onClick={() => setActiveTab(tab)} className={`px-6 py-4 text-left rounded-md font-semibold transition-all cursor-pointer ${activeTab === tab ? 'bg-[var(--color-primary)] text-black' : 'bg-gray-500/5 text-gray-400 hover:bg-gray-500/20 hover:text-white'}`}>{tab}</button>
@@ -75,11 +72,13 @@ export default function About() {
                 </div>
                 <div className="md:col-span-2">
                     <h2 className="text-4xl font-bold mb-4">{activeTab}</h2>
-                    <p className="text-gray-400 mb-10">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus architecto eum impedit nulla quod voluptatum.
-                    </p>
                     {activeTab === 'Experience' && (
                         <div className="h-[500px] overflow-y-scroll pr-2 custom-scrollbar">
+                            <p className="text-gray-400 mb-10">
+                                With over 10 years of experience in web development, I have participated in a wide variety of projects—from showcase
+                                websites to custom applications. This versatility allows me to quickly adapt to each need and provide concrete solutions,
+                                whether it be front-end integration, back-end logic, or technical optimization.
+                            </p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 {experiences.map((exp, index) => (
                                     <div key={index} className="bg-gray-500/5 hover:bg-gray-500/10 border border-gray-800 rounded-lg px-5 py-10 hover:border-[var(--color-primary)] transition-all duration-500 cursor-pointer">
@@ -95,6 +94,11 @@ export default function About() {
                     )}
                     {activeTab === 'Education' && (
                         <div className="h-[500px] overflow-y-scroll pr-2 custom-scrollbar">
+                            <p className="text-gray-400 mb-10">
+                                A passionate self-taught learner, I have strengthened my knowledge through real-world projects,
+                                continuing education, and constant monitoring of technological developments.
+                                My philosophy: learn every day and experiment to stay at the forefront of best practices in web and mobile technology.
+                            </p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 {educations.map((edu, index) => (
                                     <div key={index} className="bg-gray-500/5 hover:bg-gray-500/10 border border-gray-800 rounded-lg px-5 py-10 hover:border-[var(--color-primary)] transition-all duration-500 cursor-pointer">
@@ -109,19 +113,29 @@ export default function About() {
                         </div>
                     )}
                     {activeTab === 'Skills' && (
-                       <ul className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-gray-200 mt-4">
-                           {skills.map((skill, index) => (
-                               <li key={index} className='relative cursor-pointer bg-gray-500/5 rounded py-11 flex-col flex items-center group'>
-                                   <i className="text-6xl group-hover:text-primary transition-all duration-500">{skill.icon}</i>
-                                   <span className='absolute bottom-[5px] scale-0 rounded bg-gray-800 px-2 py-1 font-semibold text-1xl text-white transition-all  group-hover:scale-100 group-hover:text-primary'>{skill.name}</span>
-                               </li>
-                           ))}
-                       </ul>
+                        <div>
+                            <p className="text-gray-400 mb-10">
+                                My skills cover the entire development chain:
+                                WordPress, PHP, JavaScript, React, Next.js, HTML/CSS, SEO, REST API, Docker.
+                                I am also proficient in API integration, plugin creation, setting up modern development environments,
+                                and deploying high-performance applications.
+                            </p>
+
+                           <ul className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-gray-200 mt-4">
+                               {skills.map((skill, index) => (
+                                   <li key={index} className='relative cursor-pointer bg-gray-500/5 rounded py-11 flex-col flex items-center group'>
+                                       <i className="text-6xl group-hover:text-primary transition-all duration-500">{skill.icon}</i>
+                                       <span className='absolute bottom-[5px] scale-0 rounded bg-gray-800 px-2 py-1 font-semibold text-1xl text-white transition-all  group-hover:scale-100 group-hover:text-primary'>{skill.name}</span>
+                                   </li>
+                               ))}
+                           </ul>
+                        </div>
                     )}
                     {activeTab === 'About me' && (
                         <div className="text-gray-400 space-y-4">
                             <p>
-                                Hi! i'm <span className="text-primary font-semibold">Cédric </span>a passionate full-stack developer who enjoys crafting modern web applications, mobile applications.
+                                Hi! i'm <span className="text-primary font-semibold">Cédric </span>a passionate full-stack developer who enjoys crafting modern web and mobile applications.<br/>
+                                I love turning ideas into elegant, functional solutions that users enjoy. Based in France, I work as a freelancer, available for collaborations and new projects.
                             </p>
                             <ul className="space-y-2">
                                 <li><strong>Experience:</strong> 10+ year in Web Development</li>

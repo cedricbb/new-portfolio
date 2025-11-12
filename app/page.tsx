@@ -75,9 +75,13 @@ export default function Home() {
                           />
                       </h1>
                       <p className="mt-6 max-w-[60ch] text-lg text-[#ADB7BE]">
-                          Explorer a collection of Shadcn UI blocks and components, ready to
-                          preview and copy. Streamline your development workflow with
-                          easy-to-implement examples.
+                          As an experienced developer with a passion for new technologies and their rapid evolution,
+                          I aspire to put my skills to work for a company with an innovative, enthusiastic, and bold culture.<br/>
+                          Thanks to my extensive training and a wealth of professional experience,
+                          I have become a perfectionist in the design and adaptation of websites and web applications.<br/>
+                          I am a methodical person who learns
+                          easily, and I am constantly learning and improving. I am resourceful and independent
+                          in finding solutions to obstacles.
                       </p>
                       <div className="mt-12 flex flex-col xl:flex-row items-center gap-4">
                           <Button size="lg" className="cursor-pointer">
